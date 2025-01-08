@@ -4,7 +4,7 @@ export default function NavBar() {
       <div className="navbar-content mt-16 ml-32  " >
         <div className="title-container mb-24 ">
           <h1>Theo Maurino</h1>
-          <h3 className="w-full ">Fullstack developer, hacker, generational talent, pathologically humble</h3>
+          <h3 className="w-full ">Fullstack developer, ethical hacker, generational talent, pathologically humble</h3>
         </div>
         <div className="section-links-headers flex flex-col gap-4">
           <h2>
