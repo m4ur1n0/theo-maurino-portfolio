@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #dfdbc3;
+  --text-color: #593534;
+
+  --highlight : #990000;
+  --black : #121212;
+  --white : #f1f1f1;
+  --selection : #f0fc4b;
+}
+
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+html, body {
+  color: var(--foreground);
+  background: var(--background);
+  height : 100%;
+  margin : 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, p, a, div{
+  color : var(--text-color);
+}
+a:hover {
+  color : var(--highlight);
+}
+
+::selection {
+  background-color: var(--selection);
+}
+
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 700;
+  
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 500;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 400;
+}
+
+h4 {
+  display: block;
+  font-size: 1em;
+
+  margin-right: 0;
+  font-weight: 300;
+}
+
+h5 {
+  display: block;
+  font-size: .83em;
+
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 300;
+}
+
+.projects-section-header h2 {
+  color : var(--white);
+
+}
+
+.projects-section-header h2::selection {
+  background-color: #a96464;
+}

@@ -1,4 +1,17 @@
 /** @type {import('tailwindcss').Config} */
+
+/**
+ *   
+  --background: #dfdbc3;
+  --text-color: #593534;
+
+  --highlight : #990000;
+  --black : #121212;
+  --white : #f1f1f1;
+  --selection : #f0fc4b;
+ */
+
+
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,7 +22,11 @@ export default {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
+        text_color: "var(--text-color)",
+        highlight : "var(--highlight)",
+        black : "var(--black)",
+        white : "var(--white)",
+        selection : "var(--selection)"
       },
     },
   },
