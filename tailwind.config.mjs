@@ -26,7 +26,9 @@ export default {
         highlight : "var(--highlight)",
         black : "var(--black)",
         white : "var(--white)",
-        selection : "var(--selection)"
+        selection : "var(--selection)",
+        shadow_color : "var(--shadow)",
+
       },
     },
   },

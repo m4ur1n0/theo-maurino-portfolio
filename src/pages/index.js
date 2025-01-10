@@ -1,6 +1,8 @@
 import NavBar from '@/components/NavBar';
 import SectionHeader from '@/components/SectionHeader';
 import WorkHistory from '@/components/WorkHistory';
+import Project from '@/components/Project';
+
 
 export default function Home() {
   const work_experiences = [
@@ -9,7 +11,17 @@ export default function Home() {
       description : "Provided customer service and professional communication for this busy independent co-op grocery. Handled invoice management and product maintenance. Frequently delegated to other departments due to adaptability and reliability.",
       start : "June 2021",
       end : "September 2023",
-      skills : ["Customer Service", "Adaptability", "Team Management"]
+      skills : ["Customer Service", "Adaptability", "Team Management",]
+    }
+  ]
+
+  const projects = [
+    {
+      name: "Locket Cybersecurity Website",
+      description : "Built the website for my cybersecurity startup. Used React.JS, Next.JS, and TailwindCSS. Site communicates with a backend built on AWS and is hosted using vercel.",
+      date : "December, 2024",
+      skills : ["React.JS", "Next.JS", "TailwindCSS", "Frontend Development", "Fullstack Engineering", "AWS", "JavaScript", "HTML", "CSS", "Figma"],
+      image_name : "locketcyber.png"
     }
   ]
 
@@ -24,7 +36,7 @@ export default function Home() {
       {/* Content container */}
       <div className="actual-index-page w-[65%]  min-h-[200vh] mt-10  py-10 px-24">
 
-        <div className='about-section'>
+        <div className='about-section p-4 bg-shadow_color '>
           <p>
             I'm a full-stack developer from Massachusetts. I love to code so so so so so so so so much. gimme some lorem!
             <br/>
@@ -38,7 +50,7 @@ export default function Home() {
 
         <div className='work-history-section'>
           <SectionHeader text={"WORK HISTORY"} />
-          <div className='flex flex-col gap-2 w-full'>
+          <div className='flex flex-col gap-2 w-full ' >
             {
               work_experiences.map((entry, idx) => (
                 <div key={idx}>
@@ -53,7 +65,15 @@ export default function Home() {
         <div className='projects-section'>
           <SectionHeader text={"PROJECTS"} />
 
-          PROJECTS HERE
+          <div className='flex flex-col gap-2 w-full'>
+            {
+              projects.map((entry, idx) => (
+                <div key={idx} className=''>
+                  <Project {...entry} />
+                </div>
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>

@@ -7,16 +7,22 @@ export default function NavBar() {
           <h3 className="w-full ">Fullstack developer, ethical hacker, generational talent, pathologically humble</h3>
         </div>
         <div className="section-links-headers flex flex-col gap-4">
+
           <h2>
             About
           </h2>
+
           <h2>
             Work History
           </h2>
+
           <h2>
             Projects
           </h2>
+          
         </div>
+
+
       </div>
     </div>
   );
