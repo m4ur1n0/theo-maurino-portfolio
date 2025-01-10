@@ -2,8 +2,17 @@ import React from 'react'
 
 const WorkHistory = ({name, description, date, skills, image_name, url=''}) => {
     // everything is a string except skills which is a list
+
+    const handleClick = () => {
+        if(url) {
+            window.open(url, "_blank");
+        }
+    }
+
   return (
-    <div className='flex flex-row justify-between p-5 my-5 rounded-2xl total-shadow-md transition-transform transform duration-200 ease-in-out hover:scale-[1.02] hover:total-shadow-md cursor-pointer'>
+    <div className='flex flex-row justify-between p-5 my-5 rounded-2xl total-shadow-md transition-transform transform duration-200 ease-in-out hover:scale-[1.02] hover:total-shadow-md cursor-pointer'
+        onClick={handleClick}
+    >
         <img 
             className='w-[30%] object-contain' 
             src={`/images/${image_name}`} 

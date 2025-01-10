@@ -2,8 +2,18 @@ import React from 'react'
 
 const WorkHistory = ({name, description, start, end, skills, url=''}) => {
     // everything is a string except skills which is a list
+
+    const handleClick = () => {
+
+        if(url) {
+            window.open(url, "_blank");
+        }
+    }
+
   return (
-    <div className='work-history-item p-5 my-3 flex flex-col w-full rounded-2xl total-shadow-md transition-transform transform duration-200 ease-in-out hover:scale-[1.02] hover:total-shadow-md cursor-pointer'>
+    <div className='work-history-item p-5 my-3 flex flex-col w-full rounded-2xl total-shadow-md transition-transform transform duration-200 ease-in-out hover:scale-[1.02] hover:total-shadow-md cursor-pointer'
+        onClick={handleClick}
+    >
         <p>{start} — {end}</p>
         <h2 className='my-1'>{name}</h2>
         <p>{description}</p>
