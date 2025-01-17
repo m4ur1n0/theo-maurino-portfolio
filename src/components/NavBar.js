@@ -18,9 +18,11 @@ export default function NavBar({selected, setSelected}) {
 
   const navigateToSection = (section) => {
 
-    setSelected(section);
     const element = document.getElementById(section);
     element.scrollIntoView({behavior : "smooth"});
+    setSelected(section);
+
+
 
   }
 

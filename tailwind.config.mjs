@@ -28,6 +28,7 @@ export default {
         white : "var(--white)",
         selection : "var(--selection)",
         shadow_color : "var(--shadow)",
+        secondary_text : "var(--secondary-text)", 
 
       },
     },
