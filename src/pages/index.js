@@ -94,6 +94,14 @@ export default function Home() {
       skills : ["Typescript", "Full Stack Engineering", "Firebase", "Agile Software Development", "TailwindCSS", "Vite", "Backend Engineering", "Social Media", "App Development", "Cross-functional Teamwork"],
       image_name : "gymbuddies.png",
       url : "https://gymbuddies-20bbf.web.app/"
+    },
+    {
+      name : "Algorithm Visualizer",
+      description : "Built an algorithm visualizer to demonstrate my knowledge of data structures and algorithms, as well as to make a fun playground for seeing how different algorithms actually work. I regularly update with new algorithms.",
+      date : "January, 2025",
+      skills : ["Algorithms", "Data Structures", "Pathfinding Algorithms", "Sorting Algorithms", "JavaScript", "React.JS", "Frontend Engineering", "Optimization"],
+      image_name : "algorithm-visualizer.png",
+      url : "https://algorithm-visualizers-three.vercel.app/pathfinding"
     }
   ]
 
