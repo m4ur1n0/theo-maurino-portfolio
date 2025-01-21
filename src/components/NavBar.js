@@ -20,7 +20,7 @@ export default function NavBar({selected, setSelected}) {
 
     const element = document.getElementById(section);
     element.scrollIntoView({behavior : "smooth"});
-    setSelected(section);
+    // setSelected(section);
 
 
 
@@ -51,7 +51,20 @@ export default function NavBar({selected, setSelected}) {
 
         </div>
 
+        <div className="socials-links flex justify-between items-center mt-36 w-2/3">
+          <a className="" href='https://www.linkedin.com/in/theo-maurino-829929239/' target='_blank'>
+            <img className="w-1/3 color-text_color" src='/vectors/linkedin.svg' />
+          </a>
 
+          <a className="" href='https://www.github.com/m4ur1n0/' target='_blank'>
+            <img className="w-1/3" src='/vectors/github.svg' />
+          </a>
+
+          <a className="" href='https://mailto:thjmaurino@gmail.com' target='_blank'>
+            <img className="scale-[3.2]" src='/vectors/gmail.svg' />
+          </a>
+        </div>
+        
       </div>
     </div>
   );

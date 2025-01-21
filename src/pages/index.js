@@ -146,7 +146,9 @@ export default function Home() {
 
         <div className='about-top-locator h-1' id="work" ref={workRef} />
         <div className='work-history-section'  >
-          <SectionHeader curr={currentSection} text={"WORK HISTORY"} />
+          <SectionHeader>
+            <h2 className='font-bold'>WORK HISTORY</h2>
+          </SectionHeader>
           <div className='flex flex-col gap-2 w-full ' >
             {
               work_experiences.map((entry, idx) => (
@@ -160,7 +162,9 @@ export default function Home() {
         </div>
 
         <div className='projects-section' id="projects" ref={projectRef}>
-          <SectionHeader curr={currentSection} text={"PROJECTS"} />
+          <SectionHeader>
+            <h2 className='font-bold'>PROJECTS</h2>
+          </SectionHeader>
 
           <div className='flex flex-col gap-2 w-full'>
             {
