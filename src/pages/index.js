@@ -147,7 +147,7 @@ export default function Home() {
         <div className='about-top-locator h-1' id="work" ref={workRef} />
         <div className='work-history-section'  >
           <SectionHeader>
-            <h2 className='font-bold'>WORK HISTORY</h2>
+            <h2 className='font-bold text-white'>WORK HISTORY</h2>
           </SectionHeader>
           <div className='flex flex-col gap-2 w-full ' >
             {
@@ -163,7 +163,7 @@ export default function Home() {
 
         <div className='projects-section' id="projects" ref={projectRef}>
           <SectionHeader>
-            <h2 className='font-bold'>PROJECTS</h2>
+            <h2 className='font-bold text-white'>PROJECTS</h2>
           </SectionHeader>
 
           <div className='flex flex-col gap-2 w-full'>

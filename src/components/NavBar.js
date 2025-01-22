@@ -50,6 +50,11 @@ export default function NavBar({selected, setSelected}) {
 
   return (
     <div className="h-screen text-black shadow-lg flex flex-col pr-10">
+
+      <div className="absolute h-full w-[20px] bg-highlight2 left-[10%]" />
+      <div className="absolute h-full w-[6px] bg-text_color_clear left-[5%]" />
+      <div className="absolute w-full h-[10px] bg-text_color_clear bottom-[6%]" />
+
       <div className="navbar-content mt-16 ml-32  " >
         <div className="title-container mb-16 ">
           <h1>Theo Maurino</h1>
@@ -90,7 +95,7 @@ export default function NavBar({selected, setSelected}) {
 
 
           <a href={"/files/resume.pdf"} download="theo_maurino">
-            <img className="w-1/4 mx-12 " src='/vectors/download.svg' />
+            <img className="w-1/4 mx-12  " src='/vectors/download.svg' />
           </a>
         </div>
         

@@ -23,7 +23,9 @@ export default {
       colors: {
         background: "var(--background)",
         text_color: "var(--text-color)",
+        text_color_clear : "var(--text-color-clear)",
         highlight : "var(--highlight)",
+        highlight2 : "var(--highlight2)",
         black : "var(--black)",
         white : "var(--white)",
         selection : "var(--selection)",

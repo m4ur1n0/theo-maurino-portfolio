@@ -19,10 +19,18 @@
 :root {
   --background : #fefefe;
   --shadow : #f4f4f4;
-  --text-color: #593534;
+  --text-color: #381a15;
+  /* --text-color: #263c20; */
+
+  --decoration-color : #3c2420;
+
+  --text-color-clear : #381a158a;
   --secondary-text : #9c8080;
 
-  --highlight : #833e3e;
+
+
+  --highlight : #80a35895;
+  --highlight2 : #395732;
   --black : #171717;
   --white : #fefefe;
   --selection : #ce7a9a;
@@ -104,21 +112,21 @@ h5 {
   font-weight: 300;
 }
 
-.projects-section-header h2 {
+/* .projects-section-header h2 {
   color : var(--text-color);
 
-}
+} */
 
 .projects-section-header h2::selection {
   background-color: #a96464;
 }
 
 .total-shadow-md {
-  @apply shadow-[0_0_8px_rgba(0,0,0,0.1)];
+  @apply shadow-[0_0_8px_rgba(89,53,52,0.1)];
 }
 
 .total-shadow-lg {
-  @apply shadow-[0_0_10px_rgba(0,0,0,0.15)];
+  @apply shadow-[0_0_10px_rgba(89,53,52,0.15)];
 }
 
 .hide-scrollbar {

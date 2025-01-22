@@ -11,7 +11,7 @@ const WorkHistory = ({name, description, position, start, end, skills, url=''}) 
     }
 
   return (
-    <div className='work-history-item p-5 my-3 flex flex-col w-full rounded-2xl total-shadow-md transition-transform transform duration-200 ease-in-out hover:scale-[1.02] hover:total-shadow-md cursor-pointer'
+    <div className='work-history-item p-5 my-3 flex flex-col w-full rounded-2xl total-shadow-md transition-transform transform duration-200 ease-in-out hover:scale-[1.02] hover:total-shadow-md cursor-pointer bord'
         onClick={handleClick}
     >
         <p className='text-secondary_text'>{start} — {end}</p>
