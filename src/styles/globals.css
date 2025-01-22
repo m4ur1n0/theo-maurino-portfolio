@@ -119,7 +119,7 @@ h5 {
 } */
 
 .projects-section-header h2::selection {
-  background-color: #a96464;
+  background-color: var(--selection);
 }
 
 .total-shadow-md {
