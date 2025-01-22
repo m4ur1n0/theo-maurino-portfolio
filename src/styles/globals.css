@@ -24,13 +24,17 @@
 
   --decoration-color : #3c2420;
 
-  --text-color-clear : #381a158a;
+  --text-color-clear : #381a15a2;
   --secondary-text : #9c8080;
 
 
 
-  --highlight : #80a35895;
-  --highlight2 : #395732;
+  /* --highlight : #80a35895;
+  --highlight2 : #395732; */
+
+  --highlight : #4c150c;
+  --highlight2 : #83514a;
+
   --black : #171717;
   --white : #fefefe;
   /* --selection : #ce7a9a; */
