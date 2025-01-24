@@ -10,23 +10,24 @@ export default function Home() {
   const workRef = useRef(null);
   const projectRef = useRef(null);
 
-  const handleScroll = (event) => {
-    const container = event.target; // The scrollable container
+  const handleScroll = () => {
     if (workRef.current && projectRef.current) {
       const workRect = workRef.current.getBoundingClientRect();
       const projectRect = projectRef.current.getBoundingClientRect();
-      const containerTop = container.getBoundingClientRect().top; // Top of the scrollable container
 
-      console.log('workRect.top:', workRect.top, 'projectRect.top:', projectRect.top);
 
-      if (projectRect.top - containerTop <= 0) {
-        console.log('Switching to: projects');
-        setCurrentSection('projects');
-      } else if (workRect.top - containerTop <= 0) {
-        console.log('Switching to: work-history');
+      // console.log('workRect.top:', workRect.top, 'projectRect.top:', projectRect.top);
+
+      if (workRect.top <= 0 ) {
+        console.log('Switching to: work');
         setCurrentSection('work-history');
+
+      } else if (projectRect.top <= 0) {
+        // console.log('Switching to: projects');
+        setCurrentSection('projects');
+
       } else {
-        console.log('Switching to: about');
+        // console.log('Switching to: about');
         setCurrentSection('about');
       }
     }
@@ -101,8 +102,9 @@ export default function Home() {
       date : "January, 2025",
       skills : ["Algorithms", "Data Structures", "Pathfinding Algorithms", "Sorting Algorithms", "JavaScript", "React.JS", "Frontend Engineering", "Optimization"],
       image_name : "algorithm-visualizer.png",
-      url : "https://algorithm-visualizers-three.vercel.app/pathfinding"
-    }
+      url : "https://algorithm-visualizers-three.vercel.app/"
+    },
+    
   ]
 
   const coursework = [
@@ -129,9 +131,10 @@ export default function Home() {
 
       {/* Content container */}
       <div className="actual-index-page w-[65%]  overflow-y-auto   py-10 px-24" onScroll={handleScroll}>
-        <div className='about-top-locator h-1' id="about" />
 
-        <div className='about-section p-4 bg-shadow_color rounded-sm mt-10 mb-5' >
+        <div className='about-top-locator h-1' id="about" />
+        <div className='about-section px-4 py-5 bg-shadow_color rounded-sm mt-10 mb-5 flex justify-between gap-5 max-h-[400px] items-center object-contain overflow-hidden' >
+          <img src='/images/theo-headshot.jpg' className='h-full w-1/3' />
           <p>
             I'm a full-stack developer from Massachusetts. I love to code so so so so so so so so much. This site is obviously a work in progress!
             <br/>
@@ -144,24 +147,9 @@ export default function Home() {
         </div>
 
 
-        <div className='about-top-locator h-1' id="work" ref={workRef} />
-        <div className='work-history-section'  >
-          <SectionHeader>
-            <h2 className='font-bold text-white'>WORK HISTORY</h2>
-          </SectionHeader>
-          <div className='flex flex-col gap-2 w-full ' >
-            {
-              work_experiences.map((entry, idx) => (
-                <div key={idx}>
-                  <WorkHistory {...entry}/>
-                </div>
-              ))
-            }
-
-          </div>
-        </div>
-
-        <div className='projects-section' id="projects" ref={projectRef}>
+        {/* PROJECTS SECTION */}
+        <div className='projects-section-delineator w-full h-1' ref={projectRef}/>
+        <div className='projects-section' id="projects">
           <SectionHeader>
             <h2 className='font-bold text-white'>PROJECTS</h2>
           </SectionHeader>
@@ -174,6 +162,25 @@ export default function Home() {
                 </div>
               ))
             }
+          </div>
+        </div>
+
+
+        {/* WORK HISTORY SECTION */}
+        <div className='projects-section-delineator w-full h-1 ' id="work-history" ref={workRef}/>
+        <div className='work-history-section ' >
+          <SectionHeader>
+            <h2 className='font-bold text-white'>WORK HISTORY</h2>
+          </SectionHeader>
+          <div className='flex flex-col gap-2 w-full ' >
+            {
+              work_experiences.map((entry, idx) => (
+                <div key={idx}>
+                  <WorkHistory {...entry}/>
+                </div>
+              ))
+            }
+
           </div>
         </div>
       </div>

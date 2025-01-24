@@ -37,9 +37,9 @@
 
   --black : #171717;
   --white : #fefefe;
-  /* --selection : #ce7a9a; */
-  --selection : #94b68c;
-}
+  --selection : #ce7a9a;
+  /* --selection : #94b68c; */
+}                                                      
 
 
 /* @media (prefers-color-scheme: dark) {
