@@ -3,24 +3,29 @@ import SectionHeader from '@/components/SectionHeader';
 import WorkHistory from '@/components/WorkHistory';
 import Project from '@/components/Project';
 import { useState, useRef, useEffect } from 'react';
+import CourseWork from '@/components/CourseWork';
 
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState('about');
   const workRef = useRef(null);
   const projectRef = useRef(null);
+  const courseRef = useRef(null);
 
   const handleScroll = () => {
     if (workRef.current && projectRef.current) {
       const workRect = workRef.current.getBoundingClientRect();
       const projectRect = projectRef.current.getBoundingClientRect();
+      const courseRect = courseRef.current.getBoundingClientRect();
 
 
       // console.log('workRect.top:', workRect.top, 'projectRect.top:', projectRect.top);
 
-      if (workRect.top <= 0 ) {
+      if (courseRect.top <= 0) {
+        setCurrentSection('coursework');
+      } else if (workRect.top <= 0 ) {
         console.log('Switching to: work');
-        setCurrentSection('work-history');
+        setCurrentSection('work');
 
       } else if (projectRect.top <= 0) {
         // console.log('Switching to: projects');
@@ -104,21 +109,99 @@ export default function Home() {
       image_name : "algorithm-visualizer.png",
       url : "https://algorithm-visualizers-three.vercel.app/"
     },
-    
   ]
 
   const coursework = [
     {
       title : "Google Cybersecurity Professional Certificate",
       skills : ["SIEM Tools", "Threat Modeling", "Network Security", "Security Hardening", "IDS/IPS Management", "Information Technology", "Information Security", "Data Privacy", "Compliance", "Attack Vectors"],
-      url : ""
+      url : "https://coursera.org/verify/professional-cert/L3EP6FBNMJG9"
 
     },
     {
       title : "Meta Advanced React.JS Certification",
       skills : ["UI/UX Design", "React.JS", "Frontend Software Engineering", "User Interface Programming", "JavaScript", "JSX"],
+      url : "https://www.coursera.org/account/accomplishments/records/Z6O1DEPANKOS"
+    },
+    {
+      title : "Agile Software Development",
+      skills : ["Agile Methodology", "Sprint Planning", "Git", "Unit Testing", "Collaboration tools", "Backend Design", "Team Collaboration", "Continuous Deployment"],
       url : ""
-    }
+    },
+    {
+      title : "Operating Systems",
+      skills : ["System Engineering", "Concurrency", "Low-level Programming", "Optimization", "Scheduling Algorithms", "Memory Paging", "Thread Synchronization", "File Systems", "System Calls", "Operating System Architecture", "Multithreading"],
+      url : ""
+    },
+    {
+      title : "Scalable Software Architecture",
+      skills : ["Scalability", "AWS", "Backend Engineering", "Software Architecture", "API Gateways", "Serverless Computing", "Distributed Systems", "RESTful APIs", "Cloud Computing"],
+      url : ""
+    },
+    {
+      title : "Database System Design",
+      skills : ["SQL", "Schema Design", "Data Modeling", "Data Storage Optimization", "Query Optimization", "Database Normalization", "Backend Engineering", "Transaction Management"],
+      url : ""
+    },
+    {
+      title : "Introduction to Networking",
+      skills : ["Network Protocols","HTTP/HTTPS", "DNS", "Network Security", "Firewalls", "Network Architecture", "Client-server Communication", "Packet Routing"],
+      url : ""
+    },
+    {
+      title : "Design and Analysis of Algorithms",
+      skills : ["Algorithm Design", "Time/Space Complexity", "Optimization", "Dynamic Programming", "Divide and Conquer", "Greedy Algorithms", "Graph Algorithms", "Sorting Algorithms"],
+      url : ""
+    },
+    {
+      title : "Computer System Security",
+      skills : ["Cryptography", "Vulnerability Assessment", "Pentesting", "Secure Coding", "Authentication Protocols", "Cybersecurity Principles", "Malware Analysis", "Network Defense", "Security Architecture"],
+      url : ""
+    },
+    
+ 
+    {
+      title : "Mathematic Foundations of Computer Science",
+      skills : ["Set Theory", "Discrete Mathematics", "Proofs", "Logic", "Rational Problem Solving", "Mathematical Reasoning", "Recursion", "Propositional Logic"],
+      url : ""
+    },
+    {
+      title : "Data Structures and Algorithms",
+      skills : ["Trees", "Linked Lists", "Hash Tables", "Sorting Algorithms", "Algorithms", "Stacks & Queues", "Data Manipulation"],
+      url : ""
+    },
+
+
+
+    {
+      title : "Introduction to Artificial Intelligence",
+      skills : ["Search Algorithms", "A*/Dijkstra/DFS/BFS", "Macine Learning", "Neural Networks", "Natural Language Processing", "AI Principles", "Supervised & Unsupervised Learning"],
+      url : ""
+    },
+
+
+    {
+      title : "Introduction to Computer Systems",
+      skills : ["Assembly Language Programming", "Binary", "Cache Optimization", "Computer Architecture", "Memory Hierarchy"],
+      url : ""
+    },
+
+    {
+      title : "Fundamentals of Computer Programming (1, 1.5, 2)",
+      skills : ["Object Oriented Programming", "Python", "Software Design", "Syntax and Semantics", "Algorithmic Thinking"],
+      url : ""
+    },
+    {
+      title : "Linear Algebra",
+      skills : ["Matrix Operations", "Vector Spaces", "Linear Transformations", "Eigenvalues/Eigenvectors", "Orthogonality", "Applications in Computer Graphics", "Linear Equations"],
+      url : ""
+    },
+    {
+      title : "Multivariable Differential Calculus",
+      skills : ["Optimization Techniques", "Partial Derivatives", "Vector Calculus", "Applications in Machine Learning", "Multivariable Functions", "Surface Integrals", "Differential Equations"],
+      url : ""
+    },
+    
   ]
 
 
@@ -148,8 +231,8 @@ export default function Home() {
 
 
         {/* PROJECTS SECTION */}
-        <div className='projects-section-delineator w-full h-1' ref={projectRef}/>
-        <div className='projects-section' id="projects">
+        <div className='projects-section-delineator w-full h-1' id="projects" ref={projectRef}/>
+        <div className='projects-section'>
           <SectionHeader>
             <h2 className='font-bold text-white'>PROJECTS</h2>
           </SectionHeader>
@@ -167,7 +250,7 @@ export default function Home() {
 
 
         {/* WORK HISTORY SECTION */}
-        <div className='projects-section-delineator w-full h-1 ' id="work-history" ref={workRef}/>
+        <div className='projects-section-delineator w-full h-1' id="work" ref={workRef}/>
         <div className='work-history-section ' >
           <SectionHeader>
             <h2 className='font-bold text-white'>WORK HISTORY</h2>
@@ -183,6 +266,26 @@ export default function Home() {
 
           </div>
         </div>
+
+        {/* RELEVANT COURSEWORK SECTION */}
+        <div className='relevant-coursework-section-delineator w-full h-1' id='coursework' ref={courseRef} />
+        <div className='relevant-coursework-section' >
+            <SectionHeader>
+              <h2 className='font-bold text-white'>RELEVANT COURSEWORK</h2>
+            </SectionHeader>
+
+            <div className='flex flex-col gap-2 w-full'>
+              {
+                coursework.map((entry, idx) => (
+                  <div key={idx}>
+                    <CourseWork {...entry} />
+                  </div>
+                ))
+              }
+            </div>
+
+        </div>
+
       </div>
     </div>
   );

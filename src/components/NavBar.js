@@ -12,8 +12,12 @@ export default function NavBar({selected, setSelected}) {
     },
     {
       title : "Work History",
-      id : "work-history"
+      id : "work"
     },
+    {
+      title : "Courses",
+      id : "coursework"
+    }
     
 
   ]
@@ -37,10 +41,10 @@ export default function NavBar({selected, setSelected}) {
 
       <div className="absolute h-full w-[20px] bg-highlight2 left-[10%]" />
       <div className="absolute h-full w-[6px] bg-text_color_clear left-[5%]" />
-      <div className="absolute w-full h-[10px] bg-text_color_clear bottom-[6%]" />
+      <div className="absolute w-full h-[10px] bg-text_color_clear bottom-[4%]" />
 
       <div className="navbar-content mt-16 ml-32  " >
-        <div className="title-container mb-16 ">
+        <div className="title-container mb-10 ">
           <h1>Theo Maurino</h1>
           <h3 className="w-full ">Fullstack developer, ethical hacker, generational talent, pathologically humble.</h3>
         </div>
@@ -61,7 +65,7 @@ export default function NavBar({selected, setSelected}) {
 
         </div>
 
-        <div className="links-section flex flex-col items-center w-4/5 mt-32">
+        <div className="links-section flex flex-col items-center w-4/5 mt-[80px]">
           <div className="socials-links flex justify-between w-2/3 ">
             <a className="" href='https://www.linkedin.com/in/theo-maurino-829929239/' target='_blank'>
               <img className="max-w-[40px] color-text_color" src='/vectors/linkedin.svg' />
