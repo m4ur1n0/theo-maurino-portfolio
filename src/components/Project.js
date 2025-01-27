@@ -14,7 +14,7 @@ const WorkHistory = ({name, description, date, skills, image_name, url=''}) => {
         onClick={handleClick}
     >
         <img 
-            className='w-full md:w-[30%] mb-3 object-contain border border-gray-200 md:border-none' 
+            className={`w-full md:w-[30%] mb-3 object-contain border border-gray-200 md:border-none  ${image_name==='../vectors/github.svg' && ' bg-shadow_color p-8'}`} 
             src={`/images/${image_name}`} 
         />
         <div className='work-history-item  flex flex-col w-full md:w-[68%] '>

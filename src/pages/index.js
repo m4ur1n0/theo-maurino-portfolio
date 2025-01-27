@@ -109,6 +109,46 @@ export default function Home() {
       image_name : "algorithm-visualizer.png",
       url : "https://algorithm-visualizers-three.vercel.app/"
     },
+    {
+      name : "CanvAssist",
+      description: "Built full stack application during Northwestern Wildhacks 2024. CanvAssist is an (unpublished) AI-powered to-do list and assignment scheduler. Built with Python and JavaScript, integrating the OpenAI and Instructure Canvas APIs.",
+      date : "April, 2024",
+      skills : ['Algorithms', 'Data Science', 'APIs', 'AWS', 'AI', 'UI/UX', 'React.js', 'Python', ],
+      image_name : '../vectors/github.svg',
+      url : "https://github.com/m4ur1n0/Canvassist"
+    },
+    {
+      name: "Catan Board Generator",
+      description : "Developed an algorithm to create a balanced and fun board layout for the game 'Catan'. Built the web app in one day using React.js, Photoshop, Vite, and CSS.",
+      date : "July, 2024",
+      skills : ['Algorithms', 'Algorithm Design', 'Frontend Engineering', "Vite",],
+      image_name: 'catan-board-generator.png',
+      url : "https://m4ur1n0.github.io/catan_board_generator/"
+    },
+    {
+      name : "Python Web Address Scanner",
+      description : "Built a simple domain name scanner that automatically makes certain checks and requests to determine information about an IP address or web server. Useful applications could include pentesting and security research.",
+      date : "March, 2024",
+      skills : ["Networking", "Network Security", "Python", "HTTP/HTTPS", "DNS Protocols", "urllib3"],
+      image_name : "../vectors/github.svg",
+      url : "https://github.com/m4ur1n0/Python_Web_Address_Scanner"
+    },
+    {
+      name : "Cooper Raposo Architecture Portfolio",
+      description : "Hired to build a custom simple portfolio website for architect Cooper Raposo. Site yet unfinished as Raposo determines the content he wants visible.",
+      date : "December 2024",
+      skills : ["Web Development", "Frontend Engineering", "Website Building", "DNS Configuration", "Website Hosting", "UI Design"],
+      image_name : "cooper-raposo.png",
+      url : "https://www.cooperraposo.info"
+    },
+    {
+      name : "George Michael Twitter Bot",
+      description : "Built an automatic Twitter bot, with Python and Twitter API, that tweeted out each line spoken by the character George Michael from the show Arrested Development. Eventually took the bot down to clean up Cron jobs.",
+      date : "February 2024",
+      skills : ['Tweepy', 'Python', 'Twitter API', 'Job Scheduling', 'Data Manipulation'],
+      image_name : "george-mikebot.png",
+      url : "https://github.com/m4ur1n0/GM_Twitter_Bot"
+    }
   ]
 
   const coursework = [
