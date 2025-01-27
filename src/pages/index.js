@@ -136,7 +136,7 @@ export default function Home() {
     {
       name : "Cooper Raposo Architecture Portfolio",
       description : "Hired to build a custom simple portfolio website for architect Cooper Raposo. Site yet unfinished as Raposo determines the content he wants visible.",
-      date : "December 2024",
+      date : "December, 2024",
       skills : ["Web Development", "Frontend Engineering", "Website Building", "DNS Configuration", "Website Hosting", "UI Design"],
       image_name : "cooper-raposo.png",
       url : "https://www.cooperraposo.info"
@@ -144,10 +144,18 @@ export default function Home() {
     {
       name : "George Michael Twitter Bot",
       description : "Built an automatic Twitter bot, with Python and Twitter API, that tweeted out each line spoken by the character George Michael from the show Arrested Development. Eventually took the bot down to clean up Cron jobs.",
-      date : "February 2024",
+      date : "February, 2024",
       skills : ['Tweepy', 'Python', 'Twitter API', 'Job Scheduling', 'Data Manipulation'],
       image_name : "george-mikebot.png",
       url : "https://github.com/m4ur1n0/GM_Twitter_Bot"
+    },
+    {
+      name : "SimpleDB",
+      description : "Built a simple database management system in Java, known as the SimpleDB project. Learned a lot about efficient data management by building histograms, query engines, data storage and searching trees, and every other key part of a database management system.",
+      date : "February, 2024",
+      skills : ['Java', 'Efficient Data Manipulation', 'Trees', 'Database Managemeeent Systems', 'NoSQL Databasing', 'Query Optimization', 'Database Management System Design', 'Self-balancing Trees', 'Histograms', 'Searching'],
+      image_name : '../vectors/github.svg',
+      url : "https://github.com/m4ur1n0/SimpleDB-Final"
     }
   ]
 
@@ -256,9 +264,9 @@ export default function Home() {
       <div className="actual-index-page w-full md:w-[65%]  overflow-y-auto pb-10  md:py-10 px-4 flex flex-col  md:px-24" onScroll={handleScroll}>
 
         <div className='about-delineator h-1' id="about" />
-        <div className='about-section px-4 py-5 bg-shadow_color rounded-sm mt-10 mb-5 flex flex-col md:flex-row justify-between gap-5 min-h-[100vh] md:min-h-[72vh] items-center object-contain overflow-hidden' >
+        <div className='about-section px-4 py-5 bg-shadow_color rounded-sm mt-10 mb-5 flex flex-col md:flex-row justify-between gap-5 h-auto  items-center object-contain ' >
           <img src='/images/theo-headshot.jpg' className=' md:w-1/3' />
-          <p className='text-sm md:text-base'>
+          <p className='text-sm md:text-base h-full'>
           Hello! Thanks for visiting my site. My name is Theo Maurino. I’m a fullstack developer who is deeply passionate about security in the software engineering lifecycle. I love building software and digital tools, and I have several projects that prove it.
             <br/>
             <br/>
