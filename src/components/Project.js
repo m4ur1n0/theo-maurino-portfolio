@@ -10,14 +10,14 @@ const WorkHistory = ({name, description, date, skills, image_name, url=''}) => {
     }
 
   return (
-    <div className='flex flex-row justify-between p-5 my-3 rounded-2xl total-shadow-md transition-transform transform duration-200 ease-in-out hover:scale-[1.02] hover:total-shadow-md cursor-pointer'
+    <div className='flex flex-col md:flex-row justify-between p-5 my-3 rounded-2xl total-shadow-md transition-transform transform duration-200 ease-in-out hover:scale-[1.02] hover:total-shadow-md cursor-pointer'
         onClick={handleClick}
     >
         <img 
-            className='w-[30%] object-contain' 
+            className='w-full md:w-[30%] mb-3 object-contain border border-gray-200 md:border-none' 
             src={`/images/${image_name}`} 
         />
-        <div className='work-history-item  flex flex-col w-[68%] '>
+        <div className='work-history-item  flex flex-col w-full md:w-[68%] '>
             <p className='text-secondary_text'>{date}</p>
             <h2 className='my-1'>{name}</h2>
             <p>{description}</p>

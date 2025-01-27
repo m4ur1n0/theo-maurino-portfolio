@@ -208,24 +208,24 @@ export default function Home() {
   return (
     <div className="flex flex-row flex-nowrap w-screen h-screen overflow-y-auto" >
       {/* NavBar container */}
-      <div className="w-[35%] h-full sticky top-0">
+      <div className="hidden md:block w-[35%] h-full sticky top-0">
         <NavBar selected={currentSection} setSelected={changeSection}/>
       </div>
 
       {/* Content container */}
-      <div className="actual-index-page w-[65%]  overflow-y-auto   py-10 px-24" onScroll={handleScroll}>
+      <div className="actual-index-page w-full md:w-[65%]  overflow-y-auto pb-10  md:py-10 px-4 flex flex-col  md:px-24" onScroll={handleScroll}>
 
-        <div className='about-top-locator h-1' id="about" />
-        <div className='about-section px-4 py-5 bg-shadow_color rounded-sm mt-10 mb-5 flex justify-between gap-5 max-h-[400px] items-center object-contain overflow-hidden' >
-          <img src='/images/theo-headshot.jpg' className='h-full w-1/3' />
-          <p>
-            I'm a full-stack developer from Massachusetts. I love to code so so so so so so so so much. This site is obviously a work in progress!
+        <div className='about-delineator h-1' id="about" />
+        <div className='about-section px-4 py-5 bg-shadow_color rounded-sm mt-10 mb-5 flex flex-col md:flex-row justify-between gap-5 min-h-[100vh] md:min-h-[72vh] items-center object-contain overflow-hidden' >
+          <img src='/images/theo-headshot.jpg' className=' md:w-1/3' />
+          <p className='text-sm md:text-base'>
+          Hello! Thanks for visiting my site. My name is Theo Maurino. I’m a fullstack developer who is deeply passionate about security in the software engineering lifecycle. I love building software and digital tools, and I have several projects that prove it.
             <br/>
             <br/>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            I’ve been programming since I was 10 years old, starting off building little math tools in Python, but always dreaming of something bigger. Today, I’m a CS student at Northwestern University, and I’m still building. I co-founded a cybersecurity startup providing pro-bono posture analyses to local businesses in Evanston, IL, while certifying students for free. I’ve built social media apps, productivity tools, and a litany of other projects with a variety of tech stacks. 
             <br/>
             <br/>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            I have a passion for software engineering that truly eclipses all my other interests, but on the rare occasion that I’m not coding, you’ll probably find me reading a collection of short stories, playing Catan, chess, or cribbage, or cooking with friends.
           </p>
         </div>
 
@@ -246,6 +246,11 @@ export default function Home() {
               ))
             }
           </div>
+
+          <div className='link-to-github py-10 w-full flex justify-center'>
+              <a href='https://www.github.com/m4ur1n0' target="_blank" className='text-gray-300 hover:text-gray-400'>I have many more projects I haven't put on the site yet, check out my <span className='underline'>GitHub</span>!</a>
+          </div>
+
         </div>
 
 
@@ -283,6 +288,8 @@ export default function Home() {
                 ))
               }
             </div>
+
+            
 
         </div>
 
