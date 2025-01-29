@@ -296,7 +296,7 @@ export default function Home() {
           </div>
 
           <div className='link-to-github py-10 w-full flex justify-center'>
-              <a href='https://www.github.com/m4ur1n0' target="_blank" className='text-gray-300 hover:text-gray-400'>I have many more projects I haven't put on the site yet, check out my <span className='underline'>GitHub</span>!</a>
+              <a href='https://www.github.com/m4ur1n0' target="_blank" className='text-gray-300 text-center hover:text-gray-400'>I have many more projects I haven't put on the site yet, check out my <span className='underline'>GitHub</span>!</a>
           </div>
 
         </div>

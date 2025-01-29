@@ -27,7 +27,7 @@ const WorkHistory = ({name, description, date, skills, image_name, url=''}) => {
                         key={idx}
                         className="work-history-skill rounded-full mt-1 px-4 py-1 bg-text_color "
                     >
-                        <p className='text-white text-nowrap'>{skill}</p>
+                        <p className='text-white text-nowrap whitespace-nowrap'>{skill}</p>
                     </div>
                 ))}
             </div>
