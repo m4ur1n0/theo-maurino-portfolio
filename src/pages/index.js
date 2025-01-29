@@ -260,11 +260,18 @@ export default function Home() {
         <NavBar selected={currentSection} setSelected={changeSection}/>
       </div>
 
+      
+
       {/* Content container */}
       <div className="actual-index-page w-full md:w-[65%]  overflow-y-auto pb-10  md:py-10 px-4 flex flex-col  md:px-24" onScroll={handleScroll}>
 
+        
+
         <div className='about-delineator h-1' id="about" />
         <div className='about-section px-4 py-5 bg-shadow_color rounded-sm mt-10 mb-5 flex flex-col md:flex-row justify-between gap-5 h-auto  items-center object-contain ' >
+          <div className='md:hidden w-full flex flex-row items-center justify-center '>
+            <h1 className='text-6xl font-extrabold text-center'>THEO MAURINO</h1>
+          </div>
           <img src='/images/theo-headshot.jpg' className=' md:w-1/3' />
           <p className='text-sm md:text-base h-full'>
           Hello! Thanks for visiting my site. My name is Theo Maurino. I’m a fullstack developer who is deeply passionate about security in the software engineering lifecycle. I love building software and digital tools, and I have several projects that prove it.
