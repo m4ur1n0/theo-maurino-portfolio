@@ -12,6 +12,7 @@ export default function Home() {
   const projectRef = useRef(null);
   const courseRef = useRef(null);
 
+
   const handleScroll = () => {
     if (workRef.current && projectRef.current) {
       const workRect = workRef.current.getBoundingClientRect();
@@ -263,7 +264,7 @@ export default function Home() {
       
 
       {/* Content container */}
-      <div className="actual-index-page w-full md:w-[65%]  overflow-y-auto pb-10  md:py-10 px-4 flex flex-col  md:px-24" onScroll={handleScroll}>
+      <div className="actual-index-page w-full md:w-[65%]  overflow-y-auto pb-10  md:py-10 px-4 flex flex-col  md:px-24" id='index-page-window' onScroll={handleScroll}>
 
         
 
@@ -286,8 +287,8 @@ export default function Home() {
 
 
         {/* PROJECTS SECTION */}
-        <div className='projects-section-delineator w-full h-1' id="projects" ref={projectRef}/>
-        <div className='projects-section'>
+        <div className='projects-section-delineator w-full h-1'  ref={projectRef}/>
+        <div className='projects-section' id="projects">
           <SectionHeader>
             <h2 className='font-bold text-white'>PROJECTS</h2>
           </SectionHeader>
@@ -310,8 +311,8 @@ export default function Home() {
 
 
         {/* WORK HISTORY SECTION */}
-        <div className='projects-section-delineator w-full h-1' id="work" ref={workRef}/>
-        <div className='work-history-section ' >
+        <div className='projects-section-delineator w-full h-1'  ref={workRef}/>
+        <div className='work-history-section ' id="work">
           <SectionHeader>
             <h2 className='font-bold text-white'>WORK HISTORY</h2>
           </SectionHeader>
@@ -328,8 +329,8 @@ export default function Home() {
         </div>
 
         {/* RELEVANT COURSEWORK SECTION */}
-        <div className='relevant-coursework-section-delineator w-full h-1' id='coursework' ref={courseRef} />
-        <div className='relevant-coursework-section' >
+        <div className='relevant-coursework-section-delineator w-full h-1'  ref={courseRef} />
+        <div className='relevant-coursework-section' id='coursework'>
             <SectionHeader>
               <h2 className='font-bold text-white'>RELEVANT COURSEWORK</h2>
             </SectionHeader>

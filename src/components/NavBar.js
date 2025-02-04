@@ -28,6 +28,11 @@ export default function NavBar({selected, setSelected}) {
     const element = document.getElementById(section);
     element.scrollIntoView({behavior : "smooth"});
 
+    // const index_page = document.getElementById('index-page-window');
+    // index_page.scrollBy(0, 4);
+    
+
+
     // setSelected(section);
 
 
