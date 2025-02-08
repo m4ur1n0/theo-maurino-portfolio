@@ -4,6 +4,7 @@ import WorkHistory from '@/components/WorkHistory';
 import Project from '@/components/Project';
 import { useState, useRef, useEffect } from 'react';
 import CourseWork from '@/components/CourseWork';
+import { get_github_user_stats } from '@/lib/github_stats';
 
 
 export default function Home() {
@@ -37,6 +38,7 @@ export default function Home() {
         setCurrentSection('about');
       }
     }
+
   };
   
 
@@ -119,6 +121,14 @@ export default function Home() {
       url : "https://github.com/m4ur1n0/Canvassist"
     },
     {
+      name : "SimpleDB",
+      description : "Built a simple database management system in Java, known as the SimpleDB project. Learned a lot about efficient data management by building histograms, query engines, data storage and searching trees, and every other key part of a database management system.",
+      date : "February, 2024",
+      skills : ['Java', 'Efficient Data Manipulation', 'Trees', 'Database Managemeeent Systems', 'NoSQL Databasing', 'Query Optimization', 'Database Management System Design', 'Self-balancing Trees', 'Histograms', 'Searching'],
+      image_name : '../vectors/github.svg',
+      url : "https://github.com/m4ur1n0/SimpleDB-Final"
+    },
+    {
       name: "Catan Board Generator",
       description : "Developed an algorithm to create a balanced and fun board layout for the game 'Catan'. Built the web app in one day using React.js, Photoshop, Vite, and CSS.",
       date : "July, 2024",
@@ -150,14 +160,7 @@ export default function Home() {
       image_name : "george-mikebot.png",
       url : "https://github.com/m4ur1n0/GM_Twitter_Bot"
     },
-    {
-      name : "SimpleDB",
-      description : "Built a simple database management system in Java, known as the SimpleDB project. Learned a lot about efficient data management by building histograms, query engines, data storage and searching trees, and every other key part of a database management system.",
-      date : "February, 2024",
-      skills : ['Java', 'Efficient Data Manipulation', 'Trees', 'Database Managemeeent Systems', 'NoSQL Databasing', 'Query Optimization', 'Database Management System Design', 'Self-balancing Trees', 'Histograms', 'Searching'],
-      image_name : '../vectors/github.svg',
-      url : "https://github.com/m4ur1n0/SimpleDB-Final"
-    }
+    
   ]
 
   const coursework = [
@@ -253,6 +256,7 @@ export default function Home() {
     
   ]
 
+  console.log(JSON.stringify(get_github_user_stats()));
 
   return (
     <div className="flex flex-row flex-nowrap w-screen h-screen overflow-y-auto" >
