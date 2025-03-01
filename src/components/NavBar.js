@@ -51,7 +51,7 @@ export default function NavBar({selected, setSelected}) {
       <div className="navbar-content mt-16 ml-32  " >
         <div className="title-container mb-10 ">
           <h1>Theo Maurino</h1>
-          <h3 className="w-full ">Fullstack developer, ethical hacker, generational talent, pathologically humble.</h3>
+          <h3 className="w-full ">Fullstack engineer, ethical hacker, generational talent, pathologically humble.</h3>
         </div>
         <div className="section-links-headers flex flex-col gap-8">
 
