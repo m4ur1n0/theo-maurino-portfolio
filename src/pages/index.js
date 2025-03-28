@@ -103,6 +103,14 @@ export default function Home() {
       url : "https://gymbuddies-20bbf.web.app/"
     },
     {
+      name : "YesChef!",
+      description : "One of the original engineers building the YesChef! prototype. I handled all API interaction, implemented the abstraction for storing user and recipe data, designed and streamlined the user experience, and built the interface for the AI to control recipe rendering.",
+      date : "March, 2025",
+      skills : ["APIs", "Backend Engineering", "CI/CD", "Agile Software Development", "AI", "Typescript", "Audio Processing", "TailwindCSS", "JSON", "UI/UX", "Prompt Engineering", "Teamwork"],
+      image_name : "yeschef.png",
+      url : "https://yes-chef-e36a7.web.app/",
+    },
+    {
       name : "Algorithm Visualizer",
       description : "Built an algorithm visualizer to demonstrate my knowledge of data structures and algorithms, as well as to make a fun playground for seeing how different algorithms actually work. I regularly update with new algorithms.",
       date : "January, 2025",

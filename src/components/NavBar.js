@@ -89,7 +89,7 @@ export default function NavBar({selected, setSelected}) {
               <img className="max-w-[40px]  " src='/vectors/download.svg' />
             </a>
           </div>
-          <p className="email-address mt-2">thjmaurino (@) gmail (dot) com</p>
+          <p className="email-address mt-2">thjmaurino (at) gmail (dot) com</p>
         </div>
         
       </div>
