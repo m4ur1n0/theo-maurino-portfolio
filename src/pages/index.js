@@ -138,7 +138,7 @@ export default function Home() {
     },
     {
       name : "Socratic AI",
-      description : "[IN PROGRESS] Socratic educates through a feynman-style dialogue, teaching the student to teach themselves.. Implemented retrieval augmented generation (RAG) to parse textbook information. Built entire auth and backend systems.",
+      description : "[IN PROGRESS] Socratic educates through a Feynman-style dialogue, teaching the student to teach themselves.. Implemented retrieval augmented generation (RAG) to parse textbook information. Built entire auth and backend systems.",
       date : "May, 2025",
       skills : ["RAG", "AI Engineering", "APIs", "Backend Engineering", "Educational Technology", "Prompt Engineering", "Frontend Engineering", "Typescript", "Next.js"],
       image_name : "socrates.png",
