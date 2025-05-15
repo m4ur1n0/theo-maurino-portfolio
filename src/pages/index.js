@@ -4,6 +4,7 @@ import WorkHistory from '@/components/WorkHistory';
 import Project from '@/components/Project';
 import { useState, useRef, useEffect } from 'react';
 import CourseWork from '@/components/CourseWork';
+import { useRouter } from 'next/router';
 
 
 export default function Home() {
@@ -11,6 +12,23 @@ export default function Home() {
   const workRef = useRef(null);
   const projectRef = useRef(null);
   const courseRef = useRef(null);
+
+  const router = useRouter();
+
+  useEffect(() => {
+
+    if (router.asPath.includes('#')) {
+      const hash = router.asPath.split('#')[1];
+      const element = document.getElementById(hash);
+      
+      if (element) {
+        // Small timeout to ensure DOM is fully rendered
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [router.asPath]);
 
 
   const handleScroll = () => {
@@ -88,9 +106,9 @@ export default function Home() {
   const projects = [
     {
       name: "Locket Cybersecurity Website",
-      description : "Built the website for my cybersecurity startup. Used React.JS, Next.JS, and TailwindCSS. Site communicates with a backend built on AWS and is hosted using Vercel.",
+      description : "Built the website for my cybersecurity startup. Used ReactJS, Next.JS, and TailwindCSS. Site communicates with a backend built on AWS and is hosted using Vercel.",
       date : "December, 2024",
-      skills : ["React.JS", "Next.JS", "Node.JS", "TailwindCSS", "Frontend Development", "Fullstack Engineering", "AWS", "JavaScript", "HTML", "CSS", "Figma"],
+      skills : ["React", "Next.JS", "Node.JS", "TailwindCSS", "Frontend Development", "Fullstack Engineering", "AWS", "JavaScript", "HTML", "CSS", "Figma"],
       image_name : "locketcyber.png",
       url : "https://locketcyber.com"
     },
@@ -114,25 +132,50 @@ export default function Home() {
       name : "Algorithm Visualizer",
       description : "Built an algorithm visualizer to demonstrate my knowledge of data structures and algorithms, as well as to make a fun playground for seeing how different algorithms actually work. I regularly update with new algorithms.",
       date : "January, 2025",
-      skills : ["Algorithms", "Data Structures", "Pathfinding Algorithms", "Sorting Algorithms", "JavaScript", "React.JS", "Frontend Engineering", "Optimization"],
+      skills : ["Algorithms", "Data Structures", "Pathfinding Algorithms", "Sorting Algorithms", "JavaScript", "React", "Frontend Engineering", "Optimization"],
       image_name : "algorithm-visualizer.png",
       url : "https://algorithm-visualizers-three.vercel.app/"
+    },
+    {
+      name : "Socratic AI",
+      description : "[IN PROGRESS] Socratic educates through a feynman-style dialogue, teaching the student to teach themselves.. Implemented retrieval augmented generation (RAG) to parse textbook information. Built entire auth and backend systems.",
+      date : "May, 2025",
+      skills : ["RAG", "AI Engineering", "APIs", "Backend Engineering", "Educational Technology", "Prompt Engineering", "Frontend Engineering", "Typescript", "Next.js"],
+      image_name : "socrates.png",
+      url : "https://github.com/m4ur1n0/socrates"
+    },
+    {
+      name : "Sam Rusk Website",
+      description : "Worked as freelance web developer for filmmaker Sam Rusk. Site showcases Rusk's recent projects and educational successes.",
+      date : "April, 2025",
+      skills : ["Web Development", "Frontend Engineering", "React", "Web Design"],
+      image_name : "sam_rusk.png",
+      url : "https://www.sammyrusk.com"
     },
     {
       name : "CanvAssist",
       description: "Built full stack application during Northwestern Wildhacks 2024. CanvAssist is an (unpublished) AI-powered to-do list and assignment scheduler. Built with Python and JavaScript, integrating the OpenAI and Instructure Canvas APIs.",
       date : "April, 2024",
-      skills : ['Algorithms', 'Data Science', 'APIs', 'AWS', 'AI', 'UI/UX', 'React.js', 'Python', ],
+      skills : ['Algorithms', 'Data Science', 'APIs', 'AWS', 'AI', 'UI/UX', 'React', 'Python', ],
       image_name : '../vectors/github.svg',
       url : "https://github.com/m4ur1n0/Canvassist"
     },
     {
       name: "Catan Board Generator",
-      description : "Developed an algorithm to create a balanced and fun board layout for the game 'Catan'. Built the web app in one day using React.js, Photoshop, Vite, and CSS.",
+      description : "Developed an algorithm to create a balanced and fun board layout for the game 'Catan'. Built the web app in one day using React, Photoshop, Vite, and CSS.",
       date : "July, 2024",
       skills : ['Algorithms', 'Algorithm Design', 'Frontend Engineering', "Vite",],
       image_name: 'catan-board-generator.png',
       url : "https://m4ur1n0.github.io/catan_board_generator/"
+    },
+    {
+      name : "Video Compression Research",
+      description : "Conducted a research project analyzing differences in compression, codecs, resolutions, and perceived video degredation for dozens of videos on Youtube.com. Compared video popularity to compression.",
+      date : "May, 2025",
+      skills : ["Data Science", "Numpy", "Pandas", "Statistics", "Web Scraping", "Research", "Compression"],
+      image_name : "../vectors/github.svg",
+      url : "https://github.com/m4ur1n0/video-compression-research"
+
     },
     {
       name : "Python Web Address Scanner",
@@ -176,9 +219,18 @@ export default function Home() {
 
     },
     {
-      title : "Meta Advanced React.JS Certification",
-      skills : ["UI/UX Design", "React.JS", "Frontend Software Engineering", "User Interface Programming", "JavaScript", "JSX"],
+      title : "Meta Advanced ReactJS Certification",
+      skills : ["UI/UX Design", "ReactJS", "Frontend Software Engineering", "User Interface Programming", "JavaScript", "JSX"],
       url : "https://www.coursera.org/account/accomplishments/records/Z6O1DEPANKOS"
+    },
+    {
+      title : "Parallel Computing",
+      skills : ["Parallelization", "Concurrency", "OpenMP", "C++", "MPI", "Code Optimization", "Parallel Safe Data Structures"],
+      url : ""
+    },
+    {
+      title : "Advanced Seminar in Networks",
+      skills : ["Research", "Network Security", "Network Routing Solvers", "Routing Optimization", "WAN Topology", "Network Protocols"]
     },
     {
       title : "Agile Software Development",
@@ -198,6 +250,11 @@ export default function Home() {
     {
       title : "Database System Design",
       skills : ["SQL", "Schema Design", "Data Modeling", "Data Storage Optimization", "Query Optimization", "Database Normalization", "Backend Engineering", "Transaction Management"],
+      url : ""
+    },
+    {
+      title : "Intelligent Information Systems",
+      skills : ["AI Engineering", "CI/CD", "RAG", "Fullstack Engineering", "Web Development", "AI"],
       url : ""
     },
     {
